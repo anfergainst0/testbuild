@@ -1,0 +1,16 @@
+name: Sum Numbers
+
+on:
+  push:
+    paths:
+      - number.txt
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run script
+        run: |
+          python3 number.txt
